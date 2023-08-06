@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "20899108641",
+    "project_id": "authusingphone-ce974",
+    "storage_bucket": "authusingphone-ce974.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:20899108641:android:e46a435cbec531888d5060",
+        "android_client_info": {
+          "package_name": "com.anyandroid.authusingphone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "20899108641-n0o1dq8dbhfd9thmjrrj3raesvpnejh7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZyiXVoDAhDe1wifL-ixvAo7Znp0sscSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "20899108641-n0o1dq8dbhfd9thmjrrj3raesvpnejh7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_auth"
+    app:startDestination="@id/sendOtpFragment">
+
+    <fragment
+        android:id="@+id/sendOtpFragment"
+        android:name="com.anyandroid.authusingphone.SendOtpFragment"
+        android:label="fragment_send_otp"
+        tools:layout="@layout/fragment_send_otp" >
+        <action
+            android:id="@+id/action_sendOtpFragment_to_verificationOtpFragment"
+            app:destination="@id/verificationOtpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationOtpFragment"
+        android:name="com.anyandroid.authusingphone.VerificationOtpFragment"
+        android:label="fragment_verification_otp"
+        tools:layout="@layout/fragment_verification_otp" >
+        <action
+            android:id="@+id/action_verificationOtpFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+        <argument
+            android:name="verification"
+            app:argType="string"
+            android:defaultValue='' />
+    </fragment>
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.anyandroid.authusingphone.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" />
+</navigation>
