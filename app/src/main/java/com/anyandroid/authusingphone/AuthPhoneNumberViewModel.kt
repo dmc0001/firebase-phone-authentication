@@ -34,6 +34,9 @@ class AuthPhoneNumberViewModel @Inject constructor(private val auth: FirebaseAut
     val validation = _validation.receiveAsFlow()
 
     fun sendVerificationCode(phoneNumber: String, activity: Activity) {
+         runBlocking {
+            _isVerificationInProgress.emit(Resource.Loading())
+        }
         val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
             override fun onVerificationCompleted(credential: PhoneAuthCredential) {
