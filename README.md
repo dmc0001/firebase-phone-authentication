@@ -17,7 +17,7 @@ The Phone Number Authentication mechanism represents a secure and user-centric m
 
 - **Country Code Picker**: AuthConnect offers an intuitive Country Code Picker that facilitates users in selecting their country code from an extensive list. This feature ensures accurate phone number formatting based on the user's location.
 
-- **Change Country Code**: Users have the flexibility to modify the default country code to match their current location. For instance, users can switch to the relevant country code (e.g., (+62) for Indonesia) for precise phone number entry.
+- **Change Country Code**: Users have the flexibility to modify the default country code to match their current location. For instance, users can switch to the relevant country code (e.g., (+213) for Indonesia) for precise phone number entry.
 
 - **Auto-Detect Country Code**: AuthConnect goes the extra mile by automatically detecting the user's country code based on their device's location settings. This intelligent feature simplifies user experience and enhances accuracy.
 
@@ -29,11 +29,11 @@ The Phone Number Authentication mechanism represents a secure and user-centric m
    Open the project in Android Studio.
    ```
 
-- Set up your Firebase project and add the necessary configuration files to the app.
+2. Set up your Firebase project and add the necessary configuration files to the app.
 
-- Build and run the application on an Android emulator or physical device.
+3. Build and run the application on an Android emulator or physical device.
 
-- Explore the authentication flow, phone number verification, and country code selection within the app.
+4. Explore the authentication flow, phone number verification, and country code selection within the app.
 
 ## Important
 Please be aware that this application is intended for educational and demonstration purposes. While it showcases a secure phone number authentication process using Firebase, it's essential to ensure the implementation aligns with your specific security requirements before deploying it in a production environment.
