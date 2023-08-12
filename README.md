@@ -25,8 +25,9 @@ The Phone Number Authentication mechanism represents a secure and user-centric m
 1. Clone the repository to your local machine.
 
    ```bash
-   git clone https://github.com/your-username/AuthConnect.git ```
+   git clone https://github.com/your-username/AuthConnect.git 
    Open the project in Android Studio.
+   ```
 
 - Set up your Firebase project and add the necessary configuration files to the app.
 
