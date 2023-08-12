@@ -1,4 +1,4 @@
-package com.anyandroid.authusingphone
+package com.anyandroid.authusingphone.utils
 
 fun validOTP(
     codeSendVerification: String

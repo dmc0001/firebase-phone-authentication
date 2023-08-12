@@ -1,4 +1,4 @@
-package com.anyandroid.authusingphone
+package com.anyandroid.authusingphone.utils
 
 sealed class Resources<T>(
     val data: T? = null,

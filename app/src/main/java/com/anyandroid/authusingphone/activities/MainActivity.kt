@@ -1,7 +1,8 @@
-package com.anyandroid.authusingphone
+package com.anyandroid.authusingphone.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.anyandroid.authusingphone.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

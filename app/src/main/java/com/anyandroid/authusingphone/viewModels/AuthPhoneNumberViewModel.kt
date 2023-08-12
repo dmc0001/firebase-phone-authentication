@@ -1,9 +1,13 @@
-package com.anyandroid.authusingphone
+package com.anyandroid.authusingphone.viewModels
 
 import android.app.Activity
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.anyandroid.authusingphone.utils.OTPFieldsState
+import com.anyandroid.authusingphone.utils.Resources
+import com.anyandroid.authusingphone.utils.VerificationOTPValidation
+import com.anyandroid.authusingphone.utils.validOTP
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
@@ -34,28 +38,18 @@ class AuthPhoneNumberViewModel @Inject constructor(private val auth: FirebaseAut
     val validation = _validation.receiveAsFlow()
 
     fun sendVerificationCode(phoneNumber: String, activity: Activity) {
-         runBlocking {
-            _isVerificationInProgress.emit(Resource.Loading())
+        runBlocking {
+            _isVerificationInProgress.emit(Resources.Loading())
         }
         val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
             override fun onVerificationCompleted(credential: PhoneAuthCredential) {
-                // This callback will be invoked in two situations:
-                // 1 - Instant verification. In some cases the phone number can be instantly
-                //     verified without needing to send or enter a verification code.
-                // 2 - Auto-retrieval. On some devices Google Play services can automatically
-                //     detect the incoming verification SMS and perform verification without
-                //     user action.
-                //  Log.d("onVerificationCompleted", "onVerificationCompleted:$credential")
-                //signInWithPhoneAuthCredential(credential)
+
             }
 
             override fun onVerificationFailed(e: FirebaseException) {
-                // This callback is invoked in an invalid request for verification is made,
-                // for instance if the the phone number format is not valid.
 
                 Log.d("sendVerificationCode", "Verification Failed: $e")
-
 
                 // Show a message and update the UI
             }
@@ -69,7 +63,8 @@ class AuthPhoneNumberViewModel @Inject constructor(private val auth: FirebaseAut
                 // by combining the code with a verification ID.
 
                 _verificationId.value = verificationId
-                _isVerificationInProgress.value = Resources.Success(true,"onCodeSent: $verificationId")
+                _isVerificationInProgress.value =
+                    Resources.Success(true, "onCodeSent: $verificationId")
 
                 Log.d("sendVerificationCode", "onCodeSent: $verificationId")
 
@@ -102,14 +97,15 @@ class AuthPhoneNumberViewModel @Inject constructor(private val auth: FirebaseAut
                 _isVerificationInProgress.emit(Resources.Loading())
             }
             auth.signInWithCredential(credential)
-                .addOnCompleteListener() { task ->
+                .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
                         Log.d(
                             "signInWithPhoneAuthCredential",
                             "signInWithCredential success: ${task.result} "
                         )
-                        _isVerificationInProgress.value = Resources.Success(false,"signInWithCredential success: ${task.result}")
+                        _isVerificationInProgress.value =
+                            Resources.Success(false, "signInWithCredential success: ${task.result}")
 
                         //val user = task.result?.user
                     } else {
@@ -118,7 +114,8 @@ class AuthPhoneNumberViewModel @Inject constructor(private val auth: FirebaseAut
                             "signInWithPhoneAuthCredential",
                             "signInWithCredential failure: ${task.exception} "
                         )
-                        _isVerificationInProgress.value = Resources.Failed("signInWithCredential failure: ${task.exception}")
+                        _isVerificationInProgress.value =
+                            Resources.Failed("signInWithCredential failure: ${task.exception}")
                         // Update UI
                     }
                 }

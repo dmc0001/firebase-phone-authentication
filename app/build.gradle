@@ -29,12 +29,10 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
+
 
     buildFeatures {
         viewBinding true
@@ -66,7 +64,7 @@ dependencies {
     implementation 'com.hbb20:ccp:2.5.0'
 
     //loading button
-    implementation 'br.com.simplepass:loading-button-android:2.2.0'
+    implementation("com.github.leandroborgesferreira:loading-button-android:2.3.0")
 
     //Dagger - Hilt
     implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'

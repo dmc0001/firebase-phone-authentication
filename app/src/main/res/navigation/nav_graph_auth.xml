@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/sendOtpFragment"
-        android:name="com.anyandroid.authusingphone.SendOtpFragment"
+        android:name="com.anyandroid.authusingphone.fragments.SendOtpFragment"
         android:label="fragment_send_otp"
         tools:layout="@layout/fragment_send_otp" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/verificationOtpFragment"
-        android:name="com.anyandroid.authusingphone.VerificationOtpFragment"
+        android:name="com.anyandroid.authusingphone.fragments.VerificationOtpFragment"
         android:label="fragment_verification_otp"
         tools:layout="@layout/fragment_verification_otp" >
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/homePageFragment"
-        android:name="com.anyandroid.authusingphone.HomePageFragment"
+        android:name="com.anyandroid.authusingphone.fragments.HomePageFragment"
         android:label="fragment_home_page"
         tools:layout="@layout/fragment_home_page" />
 </navigation>

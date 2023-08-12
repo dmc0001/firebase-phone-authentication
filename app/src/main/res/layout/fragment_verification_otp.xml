@@ -38,7 +38,7 @@
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
-    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+    <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
         android:id="@+id/btnVerify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,4 +1,4 @@
-package com.anyandroid.authusingphone
+package com.anyandroid.authusingphone.utils
 
 sealed class VerificationOTPValidation {
     object Success : VerificationOTPValidation()

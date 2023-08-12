@@ -1,4 +1,4 @@
-package com.anyandroid.authusingphone
+package com.anyandroid.authusingphone.di
 
 import com.google.firebase.auth.FirebaseAuth
 import dagger.Module
